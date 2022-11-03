@@ -17,12 +17,3 @@
     }
   }
 </script>
-
-<style>
-  h1 {
-    background: #fff;
-    border-radius: 10px;
-    color: #000;
-    padding: 10px;
-  }
-</style>
