@@ -1,5 +1,8 @@
 <template>
-  <PrimeiroComponente/>
+  <div>
+    <PrimeiroComponente/>
+    <p>{{descricao}}</p>
+  </div>
 </template>
 
 <script>
@@ -9,6 +12,11 @@
     name: 'App',
     components: {
       PrimeiroComponente
+    },
+    data (){
+      return {
+        descricao: "Descricao do template"
+      }
     }
   }
 </script>
