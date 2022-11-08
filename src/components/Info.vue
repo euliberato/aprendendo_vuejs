@@ -1,0 +1,26 @@
+<template>
+    <div>
+        <p v-if="esta_trabalhando">Estou trabalhando no momento.</p>
+        <p v-else>Não está trabalhando no momento.</p>
+        <p>Utilizo as seguintes tecnologias:</p>
+        <ul>
+            <li>JavaScript</li>
+            <li>PHP</li>
+            <li>Python</li>
+        </ul>
+        <p v-show="mostrar_email">Mande uma mensagem para: {{ email }}</p>
+    </div>
+</template>
+
+<script lang="ts">
+    export default {
+        name: 'Info',
+        data() {
+            return {
+                esta_trabalhando: true,
+                mostrar_email: false,
+                email: 'teste@email.com'
+            }
+        }
+    }
+</script>

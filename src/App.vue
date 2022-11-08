@@ -4,6 +4,7 @@
     <p>{{descricao}}</p>
     <LifeCycle/>
     <Pessoa />
+    <Info />
   </div>
 </template>
 
@@ -11,13 +12,15 @@
   import PrimeiroComponente from './components/PrimeiroComponente.vue'
   import LifeCycle from './components/LifeCycle.vue';
   import Pessoa from './components/Pessoa.vue';
+  import Info from './components/Info.Vue';
 
   export default {
     name: 'App',
     components: {
     PrimeiroComponente,
     LifeCycle,
-    Pessoa
+    Pessoa,
+    Info
 },
     data (){
       return {
