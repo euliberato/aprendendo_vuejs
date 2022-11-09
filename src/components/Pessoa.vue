@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2>Esta é a descrição da pessoa: {{ nome }}</h2>
+        <h2>Esta é a descrição da pessoa: {{ nome }} [DEU CERTO]</h2>
         <Form/>
     </div>
 </template>

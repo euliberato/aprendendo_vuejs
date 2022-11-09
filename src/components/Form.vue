@@ -6,6 +6,7 @@
             <div><InputText/></div>
             <div><Submit/></div>
         </form>
+        <h2>[TESTE]</h2>
     </div>
 </template>
 

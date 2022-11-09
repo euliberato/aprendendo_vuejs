@@ -1,24 +1,39 @@
 <template>
-    <h1>[Teste de Life Cycle] Chamando: [data.nome] => [{{ nome }}]</h1>
+  <h1>Meu nome é {{ nome }} [Teste]</h1>
+  <Info />
 </template>
 
 <script>
-    export default {
-        name: 'LyfeCycle',
-        data(){
-            return {
-                nome: 'Undefined'
-            }
-        },
-        created(){
-            setTimeout(() => {
-                this.nome = 'Teste'
-            }, 1000);
-        },
-        mounted(){
-            setTimeout(() => {
-                this.nome = 'Teste2'
-            }, 2000);
-        }
+import Info from './Info.vue'
+
+export default {
+  name: 'LifeCycle',
+  components: {
+    Info
+  },
+  data() {
+    return { 
+      nome: "Ainda não sei"
     }
+  },
+  created() {
+    setTimeout(() => {
+      this.nome = "Ruan"
+    }, 1000);
+
+    this.lifeCycle()
+  },
+  mounted() {
+    setTimeout(() => {
+      this.nome = "Liberato"
+    }, 2000);
+
+    this.lifeCycle()
+  },
+  methods: {
+    lifeCycle() {
+      console.log("Executou");
+    }
+  }
+}
 </script>

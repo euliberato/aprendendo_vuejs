@@ -1,31 +1,28 @@
 <template>
   <div>
-    <PrimeiroComponente/>
-    <p>{{descricao}}</p>
-    <LifeCycle/>
+    <PrimeiroComponente />
+    <LifeCycle />
+    <Form />
+    <Info/>
     <Pessoa />
-    <Info />
   </div>
 </template>
 
 <script>
-  import PrimeiroComponente from './components/PrimeiroComponente.vue'
-  import LifeCycle from './components/LifeCycle.vue';
-  import Pessoa from './components/Pessoa.vue';
-  import Info from './components/Info.Vue';
+import PrimeiroComponente from './components/PrimeiroComponente.vue'
+import LifeCycle from './components/LifeCycle.vue'
+import Form from './components/Form.vue';
+import Info from './components/Info.vue';
+import Pessoa from './components/Pessoa.vue';
 
-  export default {
-    name: 'App',
-    components: {
+export default {
+  name: 'App',
+  components: {
     PrimeiroComponente,
     LifeCycle,
-    Pessoa,
-    Info
-},
-    data (){
-      return {
-        descricao: "Descricao do template"
-      }
-    }
-  }
+    Form,
+    Info,
+    Pessoa
+}
+}
 </script>
