@@ -2,12 +2,15 @@
   <div>
     <h1>Olá Vue! [Teste]</h1>
     <MultiplosEventos/>
+    <Reutilizacao/>
+    
   </div>
 </template>
 
 <script>
 
 import MultiplosEventos from './MultiplosEventos.vue';
+import Reutilizacao from './Reutilizacao.vue';
 
 
 export default {
@@ -23,6 +26,6 @@ export default {
             };
         }
     },
-    components: { MultiplosEventos, MultiplosEventos }
+    components: { MultiplosEventos, Reutilizacao }
 }
 </script>
