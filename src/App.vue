@@ -1,10 +1,11 @@
 <template>
   <div>
-    <Header/>
+    <Header :esta_logado="true"/>
     <PrimeiroComponente />
     <p class="paragrafo-pai">O dado de app é: {{ testando }}</p>
     <LifeCycle />
     <Pessoa />
+    <Info/>
   </div>
 </template>
 
@@ -25,7 +26,7 @@ export default {
     Info,
     Pessoa,
     Header
-}
+  }
 }
 </script>
 

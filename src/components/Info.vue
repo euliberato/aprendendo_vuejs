@@ -1,22 +1,25 @@
 <template>
-  <p v-if="esta_trabalhando">Estou trabalhando no momento.</p>
-  <p v-else>Estou em busca de novas oportunidades!</p>
-  <p>Utilizo as seguintes tecnologias (Back-end):</p>
-  <ul>
-    <li v-for="(techonology, index) in backend_technologies" v-bind:key="index">{{ techonology }}</li>
-  </ul>
-  <p>Utilizo as seguintes tecnologias (Front-end):</p>
-  <ul>
-    <li v-for="technology in frontend_technologies" :key="technology.id">
-      {{ technology.language }}
-    </li>
-  </ul>
   <div>
-    <button @click="showEmail">{{ textoBotao }}</button>
+    <p>{{ compEmail }} - {{ email }}</p>
+    <p v-if="esta_trabalhando">Estou trabalhando no momento.</p>
+    <p v-else>Estou em busca de novas oportunidades!</p>
+    <p>Utilizo as seguintes tecnologias (Back-end):</p>
+    <ul>
+      <li v-for="(techonology, index) in backend_technologies" v-bind:key="index">{{ techonology }}</li>
+    </ul>
+    <p>Utilizo as seguintes tecnologias (Front-end):</p>
+    <ul>
+      <li v-for="technology in frontend_technologies" :key="technology.id">
+        {{ technology.language }}
+      </li>
+    </ul>
+    <div>
+      <button @click="showEmail">{{ textoBotao }}</button>
+    </div>
+    <p v-show="mostrar_email">Mande uma mensagem para: {{ email }}</p>
+    <p class="teste">Para acessar meu portfólio <a v-bind:href="meu_link" target="_blank">basta clicar aqui</a></p>
+    <Picture/>
   </div>
-  <p v-show="mostrar_email">Mande uma mensagem para: {{ email }}</p>
-  <p class="teste">Para acessar meu portfólio <a v-bind:href="meu_link" target="_blank">basta clicar aqui</a></p>
-  <Picture/>
 </template>
 <script>
 
@@ -39,7 +42,13 @@ export default {
             ]
         };
     },
-    components: { Picture },
+    props: {
+      compEmail: String,
+      esta_trabalhando: Boolean
+    },
+    components: { 
+      Picture 
+    },
     methods: {
       showEmail() {
         this.mostrar_email = !this.mostrar_email
