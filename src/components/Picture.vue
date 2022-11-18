@@ -1,14 +1,28 @@
 <template>
-    <img :src="avatar" :alt="descricao">
+    <div>
+        <img :src="avatar" :alt="descricao">
+        <MudarImage @mudar-imagem="trocarImagem"/>
+    </div>
 </template>
 
 <script>
+
+import MudarImage from './MudarImage.vue';
+
 export default {
-    name: 'Picture',
+    name: "Picture",
     data() {
         return {
             avatar: "/img/avatar.png",
             descricao: "Ruan Liberato"
+        };
+    },
+    components: { 
+        MudarImage 
+    },
+    methods: {
+        trocarImagem(){
+            console.log('olá');
         }
     }
 }
